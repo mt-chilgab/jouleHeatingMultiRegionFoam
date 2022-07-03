@@ -1,3 +1,3 @@
 # jouleHeatingMultiRegionFoam
 
-Multi-region Conjugated Heat Transfer(CHT) solver with Joule heating consideration, for OpenFOAM v2.3.1
+Multi-region conjugated heat transfer solver with Joule heating consideration and temperature dependent electrical conductance, for OpenFOAM v2.3.1

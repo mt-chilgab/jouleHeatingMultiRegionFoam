@@ -15,6 +15,7 @@ Implements temperature dependent with built-in interpolation library, interpolat
 Defines and solves continuity equation to get electric potential distribution 
 
 $$
+\large
 \begin{align*}
 	\nabla\cdot \left( \sigma\nabla V \right) = 0
 \end{align*}

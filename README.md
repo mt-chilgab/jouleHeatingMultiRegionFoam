@@ -5,9 +5,9 @@ Multi-region conjugated heat transfer solver with Joule heating consideration in
 
 ## Changes from chtMultiRegion\*Foam
 ### solid/interpoalateProperties.H
-Implements temperature dependent electrical conductance $\sigma$ with built-in interpolation library, interpolateXY  
+Implements temperature dependent electrical conductance $\sigma$ with built-in interpolation library, interpolateXY
 ### solid/VEqn.H
-Defines and solves continuity equation below to get electric potential distribution  
+Defines and solves continuity equation below to get electric potential distribution
 
 $$
 \large

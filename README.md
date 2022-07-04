@@ -5,18 +5,17 @@ Multi-region conjugated heat transfer solver with Joule heating consideration in
 
 ## Changes from chtMultiRegion\*Foam
 ### solid/interpoalateProperties.H
-Implements temperature dependent electrical conductance $\sigma$ with built-in interpolation library, interpolateXY
+Implements temperature dependent electrical conductance $\sigma$ with built-in interpolation library, interpolateXY.
 ### solid/VEqn.H
-Defines and solves continuity equation below to get electric potential distribution
+Defines and solves continuity equation below to get electric potential distribution.
 
 $$
 \large
 \begin{align*}
 	\nabla\cdot \left( \sigma\nabla V \right) 
 	\longrightarrow
-	\usepackage{inconsolata} fvm::laplacian(sigma, elpot) == 0
 \end{align*}
-$$
+$$ `fvm::laplacian(sigma,elpot) == 0`
 
 ## References
 [1] Read temperature dependent thermophysical properties from a file - boundaries false -- CFD Online Discussion Forums. (2012, June 26). CFD Online. Retrieved May 25, 2022, from https://www.cfd-online.com/Forums/openfoam-programming-development/103774-read-temperature-dependent-thermophysical-properties-file-boundaries-false.html  

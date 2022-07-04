@@ -8,7 +8,7 @@ Multi-region conjugated heat transfer solver with Joule heating consideration in
 Implements temperature dependent electrical conductance $\sigma$ with built-in interpolation library, interpolateXY.
 ### solid/VEqn.H
 Defines and solves continuity equation below to get electric potential distribution.  
-$\large \qquad \qquad \qquad \qquad \qquad \qquad \begin{align*}\nabla\cdot \left( \sigma\nabla V \right) = 0 \end{align*} \longrightarrow$
+$\large \qquad \qquad \qquad \qquad \qquad \qquad \begin{align*}\nabla\cdot \left( \sigma\nabla V \right) = 0 \end{align*} \longrightarrow$  
 `fvm::laplacian(sigma,elpot) == 0`
 
 ## References

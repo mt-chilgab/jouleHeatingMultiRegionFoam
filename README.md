@@ -12,7 +12,7 @@ Defines and solves continuity equation below to get electric potential distribut
 $$
 \large
 \begin{align*}
-	\nabla\cdot \left( \sigma\nabla V \right) = 0
+\tag{\textnormal{Continuity Equation:}}	\nabla\cdot \left( \sigma\nabla V \right) = 0
 \end{align*}
 $$
 

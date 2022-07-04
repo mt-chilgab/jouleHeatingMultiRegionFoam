@@ -1,5 +1,6 @@
 # _jouleHeatingMultiRegion\*Foam_
-Multi-region conjugated heat transfer solver with Joule heating consideration in solid regions and temperature dependent electrical conductance, for OpenFOAM v2.3.1.    
+Multi-region conjugated heat transfer solver with Joule heating consideration in solid regions and temperature dependent electrical conductance, for OpenFOAM v2.3.1.
+
 **Both PIMPLE(_jouleHeatingMultiRegionFoam_) and SIMPLE(_jouleHeatingMultiRegionSimpleFoam_) version exists.**
 
 ## Changes from chtMultiRegion\*Foam

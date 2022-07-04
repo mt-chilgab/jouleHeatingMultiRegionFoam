@@ -3,7 +3,7 @@ Multi-region conjugated heat transfer solver with time-independent Joule heating
  
 **Both PIMPLE(_jouleHeatingMultiRegionFoam_) and SIMPLE(_jouleHeatingMultiRegionSimpleFoam_) version exists.**
 
-## Changes from chtMultiRegion\*Foam
+## Changes from _chtMultiRegion\*Foam_
 ### solid/interpolateProperties.H
 Implements temperature dependent electrical conductance $\sigma$ with built-in interpolation library, interpolateXY.
 ### solid/VEqn.H

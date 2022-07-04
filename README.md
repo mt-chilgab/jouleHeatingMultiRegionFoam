@@ -14,7 +14,7 @@ $\large \qquad \qquad \qquad \qquad \qquad \quad \begin{align*} \nabla\cdot \lef
 Energy equation in solid regions consider Joule heating per unit volume,
 $\mathbf{E} \cdot \mathbf{J} = -\nabla V \cdot \left(-\sigma \nabla V \right) = \sigma |\nabla V|^2$. This heat source term is added on the RHS of the energy equation.
 
-$\large \qquad \qquad \qquad \qquad \qquad \quad \begin{align*} \sigma |\nabla V|^2 \end{align*} \longrightarrow$
+$\large \qquad \qquad \qquad \qquad \qquad \begin{align*} \sigma |\nabla V|^2 \end{align*} \longrightarrow$
 `sigma*((fvc::grad(elpot))&(fvc::grad(elpot)))`
 
 ## References

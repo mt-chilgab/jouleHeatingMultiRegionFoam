@@ -12,7 +12,9 @@ Defines and solves continuity equation below to get electric potential distribut
 $$
 \large
 \begin{align*}
-\tag{\textnormal{Continuity Equation:}}	\nabla\cdot \left( \sigma\nabla V \right) = 0
+	\nabla\cdot \left( \sigma\nabla V \right) 
+	\longrightarrow
+	\usepackage{inconsolata} fvm::laplacian(sigma, elpot) == 0
 \end{align*}
 $$
 

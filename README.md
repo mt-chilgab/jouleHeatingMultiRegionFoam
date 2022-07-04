@@ -18,18 +18,21 @@ $\large \qquad \qquad \qquad \qquad \qquad \begin{align*} \sigma |\nabla V|^2 \e
 `sigma*((fvc::grad(elpot))&(fvc::grad(elpot)))`
 
 ## Usage
-Electrical conductance $sigma$(sigma), electric potential $V$(elpot) and electric current density $\mathbf{J}$(J) are added as new fields, and initial / boundary condition for electric conductance and potential is essential.  
-Electric conductance is calculated by interpolateXY every step so calculated condition should be assigned. Also, file named 'sigma' is required in every constant/(solid region) directories. It looks like this:
+Electrical conductance $\sigma$\(sigma\), electric potential $V$\(elpot\) and electric current density $\mathbf{J}$\(J\) are added as new fields, 
+ 
+ 1. **Initial / boundary condition for electric conductance and potential is essential.**
+ 2. **Electric conductance is calculated by interpolateXY every step so calculated condition should be assigned.**
+ 3. **File named 'sigma' is required in every constant/\(solid region\) directories. 
+  It looks like this:
+  `(  
+  293.15 6666666.67  
+  373.15 6410256.41  
+  473.15 6172839.51  
+  573.15 5917159.76  
+  673.15 5714285.71  
+  )`
 
-`(
-293.15 6666666.67
-373.15 6410256.41
-473.15 6172839.51
-573.15 5917159.76
-673.15 5714285.71
-)`
-
-As you may easily figure out, the first column stands for absolute temperatures in Kelvin and the second column stands for corresponding electrical conductance values at the temperature, represented in S/m.
+  As you may easily figure out, the first column stands for absolute temperatures in Kelvin and the second column stands for corresponding electrical conductance values at the temperature, represented in S/m.
 
 
 ## References

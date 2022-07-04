@@ -1,10 +1,10 @@
 # _jouleHeatingMultiRegion\*Foam_
 Multi-region conjugated heat transfer solver with time-independent Joule heating consideration in solid regions and temperature dependent electrical conductance, for OpenFOAM v2.3.1.
-
+ 
 **Both PIMPLE(_jouleHeatingMultiRegionFoam_) and SIMPLE(_jouleHeatingMultiRegionSimpleFoam_) version exists.**
 
 ## Changes from chtMultiRegion\*Foam
-### solid/interpoalateProperties.H
+### solid/interpolateProperties.H
 Implements temperature dependent electrical conductance $\sigma$ with built-in interpolation library, interpolateXY.
 ### solid/VEqn.H
 Defines and solves continuity equation below to get electric potential distribution.

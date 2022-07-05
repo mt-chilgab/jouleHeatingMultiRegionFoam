@@ -18,7 +18,7 @@ $\large \qquad \qquad \qquad \qquad \qquad \begin{align*} \sigma |\nabla V|^2 \e
 `sigma*((fvc::grad(elpot))&(fvc::grad(elpot)))`
 
 ## Usage
-Electrical conductance $$\sigma$$, electric potential $$V$$ and electric current density $$\mathbf{J}$$ fields are added and named sigma, elpot, J respectively. So you'll need additional works for every solid region directory residing in following directories, in order to use the solver properly. 
+Electrical conductance $\sigma$$, electric potential $$V$$ and electric current density $$\mathbf{J}$ fields are added and named sigma, elpot, J respectively. So you'll need additional works for every solid region directory residing in following directories, in order to use the solver properly. 
 
  * **0 directory**  
   Initial / boundary condition for electric conductance and potential, sigma and elpot are required. 

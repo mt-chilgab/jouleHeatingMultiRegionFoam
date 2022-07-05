@@ -20,13 +20,13 @@ $\large \qquad \qquad \qquad \qquad \qquad \begin{align*} \sigma |\nabla V|^2 \e
 ## Usage
 Electrical conductance $\sigma$, electric potential $V$ and electric current density $\mathbf{J}$ fields are added and named sigma, elpot, J respectively. So you'll need additional works for every solid region directory residing in following directories, in order to use the solver properly. 
 
-  * 0 directory  
+  * **0 directory**  
    Initial / boundary condition for electric conductance and potential, sigma and elpot.  
    Electric conductance is calculated by interpolateXY, so **calculated condition should be assigned to sigma.**
-  * system directory  
-   `fvSolution` requires elpot, elpotFinal, `fvSchemes` requires laplacian scheme for `laplacian(sigma,elpot)`.
-  * constant directory  
-   A file named 'sigma' is required. The file matches absolute temperature in Kelvin and corresponding electrical conductance value in S/m.
+  * **system directory**    
+   `fvSolution` requires `elpot`, `elpotFinal` and `fvSchemes` requires laplacian scheme for `laplacian(sigma,elpot)`.
+  * **constant directory**  
+   A file named 'sigma' is required. The file matches absolute temperature in Kelvin and corresponding electrical conductance value in S/m, so that you can get interpolated profile for electrical conductance.
    The file looks like this:
    ```
    (  

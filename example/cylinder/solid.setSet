@@ -1,0 +1,12 @@
+faceSet posTerm_solid new patchToFace solid_to_fluid
+faceSet negTerm_solid new patchToFace solid_to_fluid
+faceSet cylSurf_solid new patchToFace solid_to_fluid
+
+faceSet cylSurf_solid delete normalToFace ( 1 0 0)
+faceSet cylSurf_solid delete normalToFace (-1 0 0)
+
+faceSet posTerm_solid delete normalToFace (-1 0 0)
+faceSet posTerm_solid delete faceToFace cylSurf_solid
+
+faceSet negTerm_solid delete normalToFace ( 1 0 0)
+faceSet negTerm_solid delete faceToFace cylSurf_solid

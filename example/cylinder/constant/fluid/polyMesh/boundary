@@ -1,0 +1,85 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/fluid/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+9
+(
+    maxX
+    {
+        type            patch;
+        nFaces          10240;
+        startFace       2597278;
+    }
+    minX
+    {
+        type            patch;
+        nFaces          10240;
+        startFace       2607518;
+    }
+    minY
+    {
+        type            patch;
+        nFaces          10240;
+        startFace       2617758;
+    }
+    maxY
+    {
+        type            patch;
+        nFaces          10240;
+        startFace       2627998;
+    }
+    maxZ
+    {
+        type            patch;
+        nFaces          6400;
+        startFace       2638238;
+    }
+    minZ
+    {
+        type            patch;
+        nFaces          6400;
+        startFace       2644638;
+    }
+    posTerm_fluid
+    {
+        type            mappedWall;
+        nFaces          1404;
+        startFace       2651038;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid;
+        samplePatch     posTerm_solid;
+    }
+    negTerm_fluid
+    {
+        type            mappedWall;
+        nFaces          1396;
+        startFace       2652442;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid;
+        samplePatch     negTerm_fluid;
+    }
+    cylSurf_fluid
+    {
+        type            mappedWall;
+        nFaces          13638;
+        startFace       2653838;
+        sampleMode      nearestPatchFace;
+        sampleRegion    solid;
+        samplePatch     cylSurf_solid;
+    }
+)
+
+// ************************************************************************* //

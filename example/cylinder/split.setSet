@@ -1,0 +1,4 @@
+cellSet isolation new zoneToCell solid
+cellSet isolation add zoneToCell fluid
+cellSet isolation subset
+

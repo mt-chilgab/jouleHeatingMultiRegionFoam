@@ -20,22 +20,23 @@ $\large \qquad \qquad \qquad \qquad \qquad \begin{align*} \sigma |\nabla V|^2 \e
 ## Usage
 Electrical conductance $\sigma$, electric potential $V$ and electric current density $\mathbf{J}$ fields are added and named sigma, elpot, J respectively. So you'll need additional work to use the solver properly. 
  
- 1. Initial / boundary condition for electric conductance and potential is essential.
- 2. `fvSolution` and `fvScheme` requires . Please refer to the example directory for example case.
- 3. Electric conductance is calculated by interpolateXY every step so calculated condition should be assigned.
- 4. File named 'sigma' is required in every constant/\(solid region\) directories. 
-  It looks like this:
-  ```
-  (  
-  293.15 6666666.67  
-  373.15 6410256.41  
-  473.15 6172839.51  
-  573.15 5917159.76  
-  673.15 5714285.71  
-  )
-  ```  
-As you may easily figure out, the first column stands for absolute temperatures in Kelvin and the second column stands for corresponding electrical conductance values at the temperature, represented in S/m.
+ * Additional works would be, for every solid regions in below directories:
+  * 0 directory: Initial / boundary condition for electric conductance and potential, sigma and elpot.  
+    			 Electric conductance is calculated by interpolateXY, so **calculated condition should be assigned to sigma.**
+  * system directory: `fvSolution` requires elpot, elpotFinal, `fvSchemes` requires laplacian scheme for `laplacian(sigma,elpot)`.
+  * constant directory: A file named 'sigma' is required. The file matches absolute temperature in Kelvin and corresponding electrical conductance value in S/m.
+   The file looks like this:
+   ```
+   (  
+   293.15 6666666.67  
+   373.15 6410256.41  
+   473.15 6172839.51  
+   573.15 5917159.76  
+   673.15 5714285.71  
+   )
+   ```  
 
+Please refer to example directory for an example case.
 
 ## References
 [1] Read temperature dependent thermophysical properties from a file - boundaries false -- CFD Online Discussion Forums. (2012, June 26). CFD Online. Retrieved May 25, 2022, from https://www.cfd-online.com/Forums/openfoam-programming-development/103774-read-temperature-dependent-thermophysical-properties-file-boundaries-false.html  

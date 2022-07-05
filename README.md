@@ -18,11 +18,12 @@ $\large \qquad \qquad \qquad \qquad \qquad \begin{align*} \sigma |\nabla V|^2 \e
 `sigma*((fvc::grad(elpot))&(fvc::grad(elpot)))`
 
 ## Usage
-Electrical conductance $\sigma$\(sigma\), electric potential $V$\(elpot\) and electric current density $\mathbf{J}$\(J\) are added as new fields, so you'll need additional work to use the solver properly. 
+Electrical conductance $\sigma$, electric potential $V$ and electric current density $\mathbf{J}$ fields are added and named sigma, elpot, J respectively. So you'll need additional work to use the solver properly. 
  
  1. Initial / boundary condition for electric conductance and potential is essential.
- 2. Electric conductance is calculated by interpolateXY every step so calculated condition should be assigned.
- 3. File named 'sigma' is required in every constant/\(solid region\) directories. 
+ 2. `fvSolution` and `fvScheme` requires . Please refer to the example directory for example case.
+ 3. Electric conductance is calculated by interpolateXY every step so calculated condition should be assigned.
+ 4. File named 'sigma' is required in every constant/\(solid region\) directories. 
   It looks like this:
   ```
   (  
@@ -33,7 +34,7 @@ Electrical conductance $\sigma$\(sigma\), electric potential $V$\(elpot\) and el
   673.15 5714285.71  
   )
   ```  
-  As you may easily figure out, the first column stands for absolute temperatures in Kelvin and the second column stands for corresponding electrical conductance values at the temperature, represented in S/m.
+As you may easily figure out, the first column stands for absolute temperatures in Kelvin and the second column stands for corresponding electrical conductance values at the temperature, represented in S/m.
 
 
 ## References

@@ -18,7 +18,7 @@ $\large \qquad \qquad \qquad \qquad \qquad \begin{align*} \sigma |\nabla V|^2 \e
 `sigma*((fvc::grad(elpot))&(fvc::grad(elpot)))`
 
 ## Usage
-Electrical conductance $\sigma$\(sigma\), electric potential $V$\(elpot\) and electric current density $\mathbf{J}$\(J\) are added as new fields, 
+Electrical conductance $\sigma$\(sigma\), electric potential $V$\(elpot\) and electric current density $\mathbf{J}$\(J\) are added as new fields, so you'll need additional work to use the solver properly. 
  
  1. Initial / boundary condition for electric conductance and potential is essential.
  2. Electric conductance is calculated by interpolateXY every step so calculated condition should be assigned.

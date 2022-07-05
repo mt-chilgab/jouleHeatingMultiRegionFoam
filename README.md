@@ -18,7 +18,7 @@ $\large \qquad \qquad \qquad \qquad \qquad \begin{align*} \sigma |\nabla V|^2 \e
 `sigma*((fvc::grad(elpot))&(fvc::grad(elpot)))`
 
 ## Usage
-Electrical conductance, electric potential and electric current density fields are added and named sigma, elpot, J respectively. So you'll need additional works for every solid region directory residing in following directories, in order to use the solver properly. 
+Electrical conductance, electric potential and electric current density fields are added and named sigma, elpot, J respectively. So you'll need additional works for every solid region directory residing in following directories, in order to use the solver properly. Please refer to example directory for an example case.
 
  * **0 directory**  
   Initial / boundary condition for electric conductance and potential, sigma and elpot are required. 
@@ -37,8 +37,7 @@ Electrical conductance, electric potential and electric current density fields a
    573.15 5917159.76  
    673.15 5714285.71  
    )
-   ```
-Please refer to example directory for an example case.
+   ``` 
 
 ## References
 [1] Read temperature dependent thermophysical properties from a file - boundaries false -- CFD Online Discussion Forums. (2012, June 26). CFD Online. Retrieved May 25, 2022, from https://www.cfd-online.com/Forums/openfoam-programming-development/103774-read-temperature-dependent-thermophysical-properties-file-boundaries-false.html  

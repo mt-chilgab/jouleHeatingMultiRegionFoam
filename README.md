@@ -11,7 +11,7 @@ Defines and solves continuity equation below to get electric potential distribut
 
 <p align="center">
 $\large \nabla\cdot \left( \sigma\nabla V \right) = 0 \longrightarrow$
-`fvm::laplacian(sigma,elpot) == 0`
+	<p><code>fvm::laplacian(sigma,elpot) == 0</code></p>
 </p>
 
 ### solid/solveSolid.H
@@ -20,7 +20,7 @@ $\mathbf{E} \cdot \mathbf{J} = -\nabla V \cdot \left(-\sigma \nabla V \right) = 
 
 <p align="center">
 $\large \sigma |\nabla V|^2 \longrightarrow$
-`sigma*((fvc::grad(elpot))&(fvc::grad(elpot)))`
+	<p><code>sigma*((fvc::grad(elpot))&(fvc::grad(elpot)))</code></p>
 </p>
 
 ## Usage

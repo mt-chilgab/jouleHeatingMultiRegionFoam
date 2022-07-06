@@ -11,8 +11,8 @@ Defines and solves continuity equation below to get electric potential distribut
 
 <p align="center">
 $\large \nabla\cdot \left( \sigma\nabla V \right) = 0 \longrightarrow$
-</p>
 `fvm::laplacian(sigma,elpot) == 0`
+</p>
 
 ### solid/solveSolid.H
 Energy equation in solid regions consider Joule heating per unit volume,
@@ -20,8 +20,8 @@ $\mathbf{E} \cdot \mathbf{J} = -\nabla V \cdot \left(-\sigma \nabla V \right) = 
 
 <p align="center">
 $\large \sigma |\nabla V|^2 \longrightarrow$
-</p>
 `sigma*((fvc::grad(elpot))&(fvc::grad(elpot)))`
+</p>
 
 ## Usage
 Electrical conductance, electric potential and electric current density fields are added and named sigma, elpot, J respectively. So you'll need additional works for every solid region directory residing in following directories, in order to use the solver properly. **Please refer to example directory for an example case.**

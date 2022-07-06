@@ -1,0 +1,4 @@
+LOCAL_OBJECTS = \
+compressibleCourantNo.o\
+solidRegionDiffNo.o\
+chtMultiRegionFoam.o

@@ -38,7 +38,7 @@ Electrical conductance, electric potential and electric current density fields a
    673.15 5714285.71  
    )
    ``` 
- * If you are going to use decomposePar, you should copy sigma to every processor directories. This can be done using **copy_sigma.sh** script provided in scripts directory.
+ * If you are going to use decomposePar, you should copy sigma to every processor directories. This can be done using **copy_sigma.sh** script at case root directory. The script is provided in scripts directory.
 
 ## References
 [1] Read temperature dependent thermophysical properties from a file - boundaries false -- CFD Online Discussion Forums. (2012, June 26). CFD Online. Retrieved May 25, 2022, from https://www.cfd-online.com/Forums/openfoam-programming-development/103774-read-temperature-dependent-thermophysical-properties-file-boundaries-false.html  

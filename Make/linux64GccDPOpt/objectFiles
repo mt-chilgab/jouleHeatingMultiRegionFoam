@@ -1,0 +1,4 @@
+OBJECTS = \
+$(OBJECTS_DIR)/compressibleCourantNo.o\
+$(OBJECTS_DIR)/solidRegionDiffNo.o\
+$(OBJECTS_DIR)/chtMultiRegionFoam.o

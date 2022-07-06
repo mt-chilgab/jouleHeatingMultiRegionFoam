@@ -1,0 +1,4 @@
+DEPENDENCIES = \
+fluid/compressibleCourantNo.dep\
+solid/solidRegionDiffNo.dep\
+chtMultiRegionFoam.dep

@@ -18,7 +18,7 @@ $\large \qquad \qquad \qquad \qquad \qquad \begin{align*} \sigma |\nabla V|^2 \e
 `sigma*((fvc::grad(elpot))&(fvc::grad(elpot)))`
 
 ## Usage
-Electrical conductance, electric potential and electric current density fields are added and named sigma, elpot, J respectively. So you'll need additional works for every solid region directory residing in following directories, in order to use the solver properly. Please refer to example directory for an example case.
+Electrical conductance, electric potential and electric current density fields are added and named sigma, elpot, J respectively. So you'll need additional works for every solid region directory residing in following directories, in order to use the solver properly. **Please refer to example directory for an example case.**
 
  * **0 directory**  
   Initial / boundary condition for electric conductance and potential, sigma and elpot are required. 
@@ -27,8 +27,9 @@ Electrical conductance, electric potential and electric current density fields a
   `fvSolution`: requires solvers, preconditioners, relative and absolute tolerance of `elpot`, `elpotFinal`  
   `fvSchemes`: requires laplacian scheme for `laplacian(sigma,elpot)`   
  * **constant directory**  
-  A file named 'sigma' is required. The file matches absolute temperature in Kelvin and corresponding electrical conductance value in S/m, so that you can get interpolated profile of electrical conductance.  
-  The file looks like this:  
+  A file named **sigma** is required. The file matches absolute temperature in Kelvin and corresponding electrical conductance value in S/m, so that you can get interpolated profile of electrical conductance.  
+  If you are going to use decomposePar, **you should copy sigma to every processor directories.** This can be done using **copy_sigma.sh** script at case root directory. The script is provided in scripts directory.    
+  sigma file looks like this:  
    ```
    (  
    293.15 6666666.67  
@@ -38,8 +39,6 @@ Electrical conductance, electric potential and electric current density fields a
    673.15 5714285.71  
    )
    ``` 
- * If you are going to use decomposePar, you should copy sigma to every processor directories. This can be done using **copy_sigma.sh** script at case root directory. The script is provided in scripts directory.
-
 ## References
 [1] Read temperature dependent thermophysical properties from a file - boundaries false -- CFD Online Discussion Forums. (2012, June 26). CFD Online. Retrieved May 25, 2022, from https://www.cfd-online.com/Forums/openfoam-programming-development/103774-read-temperature-dependent-thermophysical-properties-file-boundaries-false.html  
 [2] Järvstråt, N. (2009). Adding electric conduction and Joule heating to chtMultiRegionFoam. http://www.tfd.chalmers.se/~hani/kurser/OS_CFD_2009/NiklasJarvstrat/Project0126.pdf

@@ -44,7 +44,7 @@ Electrical conductance, electric potential and electric current density fields a
    )
    ```
 ## Testing with Example Case
-For the given example case, meshing is already done so you'll just need to decompose domain with decomposePar and run the solver(_jouleHeatingMultiRegionSimpleFoam_) and reconstruct it. Commands would be:
+For the given example case, meshing is already done so you'll just need to decompose domain with decomposePar and run the solver(_jouleHeatingMultiRegionSimpleFoam_) and reconstruct. Commands would be:
    ```
    $ decomposePar -allRegions
    $ jouleHeatingMultiRegionSimpleFoam

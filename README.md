@@ -27,9 +27,9 @@ Electrical conductance, electric potential and electric current density fields a
   `fvSolution`: requires solvers, preconditioners, relative and absolute tolerance of `elpot`, `elpotFinal`  
   `fvSchemes`: requires laplacian scheme for `laplacian(sigma,elpot)`   
  * **constant directory**  
-  A file named **sigma** is required. The file matches absolute temperature in Kelvin and corresponding electrical conductance value in S/m, so that you can get interpolated profile of electrical conductance.  
+  A file named `sigma` is required. The file matches absolute temperature in Kelvin and corresponding electrical conductance value in S/m, so that you can get interpolated profile of electrical conductance.  
   If you are going to use decomposePar, **you should copy sigma to every processor directories.** This can be done using **copy_sigma.sh** script at case root directory. The script is provided in scripts directory.    
-  sigma file looks like this:  
+  `sigma` file looks like this:  
    ```
    (  
    293.15 6666666.67  

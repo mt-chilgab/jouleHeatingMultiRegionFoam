@@ -22,7 +22,7 @@ Electrical conductance, electric potential and electric current density fields a
 
  * **0 directory**  
   Initial / boundary condition for electric conductance and potential, sigma and elpot are required. 
-  Electric conductance is calculated by interpolateXY, so **calculated condition should be assigned to sigma.**
+  Electric conductance is calculated by interpolateXY, so **calculated condition should be assigned to the field sigma.**
  * **system directory**    
   `fvSolution`: requires solvers, preconditioners, relative and absolute tolerance of `elpot`, `elpotFinal`  
   `fvSchemes`: requires laplacian scheme for `laplacian(sigma,elpot)`   

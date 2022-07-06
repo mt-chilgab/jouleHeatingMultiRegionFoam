@@ -9,7 +9,7 @@ Implements temperature dependent electrical conductance $\sigma$ with built-in i
 ### solid/VEqn.H
 Defines and solves continuity equation below to get electric potential distribution.
 
-<p style="text-align: center;">$\large \nabla\cdot \left( \sigma\nabla V \right) = 0 \longrightarrow$ `fvm::laplacian(sigma,elpot) == 0`</p>
+<p align="center">$\large \nabla\cdot \left( \sigma\nabla V \right) = 0 \longrightarrow$ `fvm::laplacian(sigma,elpot) == 0`</p>
 ### solid/solveSolid.H
 Energy equation in solid regions consider Joule heating per unit volume,
 $\mathbf{E} \cdot \mathbf{J} = -\nabla V \cdot \left(-\sigma \nabla V \right) = \sigma |\nabla V|^2$. This heat source term is added on the RHS of the energy equation.

@@ -10,16 +10,18 @@ Implements temperature dependent electrical conductance $\sigma$ with built-in i
 Defines and solves continuity equation below to get electric potential distribution.
 
 <p align="center">
-$\large \nabla\cdot \left( \sigma\nabla V \right) = 0 \longrightarrow$ `fvm::laplacian(sigma,elpot) == 0`
+$\large \nabla\cdot \left( \sigma\nabla V \right) = 0 \longrightarrow$
 </p>
+`fvm::laplacian(sigma,elpot) == 0`
 
 ### solid/solveSolid.H
 Energy equation in solid regions consider Joule heating per unit volume,
 $\mathbf{E} \cdot \mathbf{J} = -\nabla V \cdot \left(-\sigma \nabla V \right) = \sigma |\nabla V|^2$. This heat source term is added on the RHS of the energy equation.
 
 <p align="center">
-$\large \sigma |\nabla V|^2 \longrightarrow$ `sigma*((fvc::grad(elpot))&(fvc::grad(elpot)))`
+$\large \sigma |\nabla V|^2 \longrightarrow$
 </p>
+`sigma*((fvc::grad(elpot))&(fvc::grad(elpot)))`
 
 ## Usage
 Electrical conductance, electric potential and electric current density fields are added and named sigma, elpot, J respectively. So you'll need additional works for every solid region directory residing in following directories, in order to use the solver properly. **Please refer to example directory for an example case.**

@@ -21,6 +21,13 @@ $\mathbf{E} \cdot \mathbf{J} = -\nabla V \cdot \left(-\sigma \nabla V \right) = 
 $\large \sigma |\nabla V|^2 \boldsymbol{\longrightarrow}$ <code>sigma*((fvc::grad(elpot))&(fvc::grad(elpot)))</code>
 </p>
 
+## Compiling the Solver
+First, you should check files named `file` located in `Make` directory, for which the compiled solver's location is described. After checking and modifying the location, type following and you`ll get the solver.  
+   ```
+   wclean
+   wmake
+   ```
+
 ## Usage
 Electrical conductance, electric potential and electric current density fields are added and named sigma, elpot, J respectively. So you'll need additional works for every solid region directory residing in following directories, in order to use the solver properly. **Please refer to example directory for an example case.**
 
